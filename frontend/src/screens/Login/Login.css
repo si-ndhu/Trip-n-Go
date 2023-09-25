@@ -1,0 +1,121 @@
+.background-image {
+  height: 100%;
+  background: url(https://live.staticflickr.com/4556/24708106728_3d933d30d9_k_d.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.central-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+}
+
+.login-container {
+  min-width: 500px;
+  background-color: #ffffffcc;
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 30px 20px 30px 20px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  box-sizing: border-box;
+}
+
+.login-overlay {
+  position: relative;
+  text-align: center;
+  color: black;
+}
+
+.title {
+  font-size: 36px;
+  margin-top: 0px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 28px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #e0e0e0;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 19px;
+  color: #333;
+}
+
+
+.submitted-message {
+  margin-top: 16px;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.button-login {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 20px 10px 30px 10px;
+    min-width: 400px;
+  }
+
+  .title {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .form-control {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .submitted-message {
+    font-size: 14px;
+  }
+
+  .button-login {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .login-container {
+    width: 100%;
+    min-width: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}

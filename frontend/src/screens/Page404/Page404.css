@@ -1,0 +1,35 @@
+/* Author: Rahul Saliya */
+
+.container-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.container-404>svg {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    transition: 0.3s;
+    color: #000;
+}
+
+.container-404>svg:hover {
+    height: auto;
+    color: var(--accent-color);
+}
+
+.container-404>p {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0px;
+    user-select: none;
+    transition: 0.3s;
+    color: #000;
+}
+
+.container-404>p:hover {
+    color: var(--accent-color);
+}

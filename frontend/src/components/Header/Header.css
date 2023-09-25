@@ -1,0 +1,288 @@
+/* Author: Rahul Saliya */
+.nav-bar {
+    display: flex;
+    padding-left: 24px;
+    padding-right: 24px;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-bar-container {
+    background: black;
+    position: sticky;
+    width: 100%;
+    left: 0px;
+    min-height: 80px;
+    top: 0px;
+    display: flex;
+    z-index: 10;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.logo {
+    font-family: '?????';
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--accent-color);
+}
+
+.logo:hover {
+    text-shadow: 0px 0px 10px var(--accent-color);
+}
+
+.logo-container {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.profile-container {
+    width: 40px;
+    height: 40px;
+    background: var(--accent-color);
+    border-radius: 25px;
+    cursor: pointer;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.notification-icon,
+.wishlist-icon {
+    color: var(--accent-color);
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    transition: 0.3s;
+    border-radius: 25%;
+    padding: 8px;
+}
+
+.notification-icon:hover,
+.wishlist-icon:hover {
+    background-color: var(--accent-color);
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.notification-dot-container {
+    position: relative;
+}
+
+.notification-dot-container:hover .notification-dot {
+    border: 1px solid var(--accent-color);
+    background-color: black;
+}
+
+.notification-dot {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    pointer-events: none;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    transition: 0.3s;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.notification-popup-icon {
+    color: var(--accent-color);
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.shopping-cart-icon {
+    color: var(--accent-color);
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+}
+
+.modal-header .btn-close {
+    margin-right: 0px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 24px;
+}
+
+.menu-button {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 15px;
+    display: block;
+    min-width: 83px;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 100px;
+    transition: 0.3s;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+    color: var(--accent-color);
+}
+
+.menu-button:hover {
+    background-color: var(--accent-color);
+    color: black;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.active,
+.active:hover {
+    background-color: var(--accent-color);
+    color: black;
+    cursor: pointer;
+}
+
+.notification-text,
+.wishlist-text,
+.hamburger-icon,
+.profile-text {
+    display: none;
+}
+
+.notification-popup .modal-content {
+    max-width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.notification-header {
+    background-color: #222;
+    color: var(--accent-color);
+}
+
+.notification-container {
+    height: 60vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.notification-item {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.notification-item:hover {
+    background-color: #eee;
+    color: black;
+    cursor: pointer;
+}
+
+.notification-title {
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: -6px;
+}
+
+.notification-description {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 4px;
+}
+
+/* responsive tablet */
+@media (max-width: 768px) {
+
+    .logo {
+        flex: 1;
+    }
+
+    .nav-bar,
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 5px;
+        padding-top: 5px;
+    }
+
+    .menu {
+        margin-left: 0px;
+    }
+
+
+    .profile-container {
+        margin-left: 0px;
+    }
+
+    .menu-button {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .active {
+        border-radius: 100px;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
+
+    .notification-icon,
+    .wishlist-icon,
+    .notification-dot-container,
+    .profile-container {
+        display: none;
+    }
+
+    .logo-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger-icon {
+        color: var(--accent-color);
+        width: 44px;
+        height: 44px;
+        padding: 8px;
+        display: block;
+        border-radius: 40%;
+        transition: 0.3s;
+    }
+
+    .hamburger-icon.active {
+        background-color: var(--accent-color);
+        color: black;
+        border-radius: 50%;
+    }
+
+    .nav-bar-container {
+        min-height: 0px;
+    }
+
+    .hide {
+        display: none;
+    }
+}

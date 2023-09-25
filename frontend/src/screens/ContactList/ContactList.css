@@ -1,0 +1,85 @@
+/* ContactList.css */
+/* Author: Abhishek Bhatt */
+
+
+.background-image {
+    height: 100%;
+    background: url(https://live.staticflickr.com/4556/24708106728_3d933d30d9_k_d.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-list-container {
+    max-width: 90%;  /* Increased the max-width */
+    background-color: #ffffffcc;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    width: 150%; 
+    max-width: 1200px; 
+  }
+  
+  .title {
+    font-size: 40px; /* Increased the font size */
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px; /* Increased the font size */
+  }
+  
+  th, td {
+    border: 1px solid #e0e0e0;
+    padding: 20px; /* Increase padding to make cells larger */
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+  
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px; /* Increased the padding */
+    cursor: pointer;
+    width: 100%;
+    max-width: 150px;
+    overflow: auto;
+    font-size: 18px; /* Increased the font size */
+  }
+  
+  /* Mobile */
+  @media (max-width: 768px) {
+    .contact-list-container {
+        width: 90%; /* adjust the width here for smaller screens */
+        min-width: 400px;
+        padding: 20px 10px 30px 10px;
+    }
+  
+    .title {
+      font-size: 35px; /* Increased the font size */
+    }
+  }
+  
+  /* Small Mobile */
+  @media (max-width: 480px) {
+    .contact-list-container {
+        width: 100%; /* adjust the width here for very small screens */
+        min-width: 0px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+  }
+  

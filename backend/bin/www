@@ -1,0 +1,74 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+require('dotenv').config();
+var app = require('../app');
+var debug = require('debug')('init:server');
+var http = require('http');
+const socketIO = require('socket.io');
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+const io = socketIO(server, {
+  cors: {
+    origin: '*'
+  }
+});
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+global.sockets = {};
+io.on('connection', socket => {
+  console.log('A client connected');
+
+  var handshakeData = socket.request;
+  const userId = handshakeData._query['userId'];
+  global.sockets[userId] = socket;
+
+  socket.on('message', message => {
+    console.log('Received message:', message);
+    socket.emit('message', message);    // Echo the message back to the client
+  });
+
+  socket.on('disconnect', () => {
+    global.sockets[userId] = null;
+    console.log('A client disconnected');
+  });
+});
+
+server.listen(port, () => {
+  console.log("Server is listening on http://localhost:" + port);
+});
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}

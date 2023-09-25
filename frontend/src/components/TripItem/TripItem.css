@@ -1,0 +1,45 @@
+/* Author: Rahul Saliya */
+.trip-item {
+    width: 300px;
+    height: 100%;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    transition: 0.3s;
+}
+
+.trip-item:hover {
+    transform: scale(1.02);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.10);
+}
+
+.trip-item__image {
+    height: 200px;
+    object-fit: cover;
+    background-color: #ccc;
+}
+
+.trip-item__info-container {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    margin-bottom: var(--bs-card-title-spacer-y);
+}
+
+.trip-item__title {
+    flex-grow: 1;
+}
+
+.trip-item__price {
+    flex: 1;
+    font-weight: 600;
+    color: #db9841;
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .trip-item {
+        width: 100%;
+        min-width: 250px;
+    }
+}
